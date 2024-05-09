@@ -1,0 +1,125 @@
+.Home
+{
+    text-align : center;
+}
+
+.Links
+{
+    margin-top: 5vmin;
+    text-align: center;
+}
+
+.Title
+{
+    animation : intro-fade-in 3s; 
+}
+.Home-logo
+{
+    height: 20vmin;
+    pointer-events: none;
+}
+
+.Devpost-logo
+{
+    height: 5vmin;
+
+    margin-top: 1vmin;
+    margin-bottom: 1vmin;
+    margin-left: 1vmin;
+    margin-right: 1vmin;
+
+    transition:0.5s;
+    transform: scale(1);
+
+    pointer-events: auto;
+}
+.Devpost-logo:hover
+{
+    transition:0.5s;
+    transform: scale(1.5);
+    rotate: 2;
+}
+
+.Github-logo
+{
+    height: 5vmin;
+
+    margin-top: 1vmin;
+    margin-bottom: 1vmin;
+    margin-left: 1vmin;
+    margin-right: 1vmin;
+
+    transition:0.5s;
+    transform: scale(1);
+
+    pointer-events: auto;
+}
+
+.Github-logo:hover
+{
+    transition:0.5s;
+    transform: scale(1.5);
+    rotate: 2;
+}
+
+.Linkedin-logo
+{
+    height: 5vmin;
+
+    margin-top: 1vmin;
+    margin-bottom: 1vmin;
+    margin-left: 1vmin;
+    margin-right: 1vmin;
+
+    transition:0.5s;
+    transform: scale(1);
+
+    pointer-events: auto;
+}
+
+.Linkedin-logo:hover
+{
+    transition:0.5s;
+    transform: scale(1.5);
+    rotate: 2;
+}
+
+@media (prefers-reduced-motion: no-preference)
+{
+    .Home-logo
+    {
+        animation: Home-logo-spin infinite 5s linear;
+    }
+}
+
+.Home-header
+{
+    background-color: #D9F4C7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #9DCDC0;
+}
+
+@keyframes Home-logo-spin 
+{
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes intro-fade-in 
+{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
+}
