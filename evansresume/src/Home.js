@@ -11,9 +11,13 @@ function Home() {
 
           <img src={logo} className="Home-logo" alt="logo" />
 
-          <h1 className="Title">
-            Evan Fioritto : A Portfolio
+          <h1 className="Name">
+            Evan Fioritto
           </h1>
+
+          <h2 className="Name">
+            Software Developer
+          </h2>
 
           <div className="Links">
 

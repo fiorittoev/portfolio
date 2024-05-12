@@ -3,16 +3,39 @@
     text-align : center;
 }
 
+.Home-header
+{
+    background-color: #D9F4C7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: top;
+    font-size: calc(10px + 2vmin);
+    color: #9DCDC0;
+}
+
 .Links
 {
     margin-top: 5vmin;
     text-align: center;
 }
 
-.Title
+.Name
 {
-    animation : intro-fade-in 3s; 
+    animation : intro-fade-in 3s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
 }
+.Description
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: 0;
+    animation : intro-fade-in 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    
+}
+
 .Home-logo
 {
     height: 20vmin;
@@ -90,18 +113,6 @@
     {
         animation: Home-logo-spin infinite 5s linear;
     }
-}
-
-.Home-header
-{
-    background-color: #D9F4C7;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: #9DCDC0;
 }
 
 @keyframes Home-logo-spin 
