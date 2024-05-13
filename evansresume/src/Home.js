@@ -17,13 +17,13 @@ function Home() {
         <div className="Left-panel">
         </div>
 
-        <header className="Home-header">
+        <header className="Center-panel">
 
           <img src={logo} className="Home-logo" alt="logo" />
 
-          <h1 className="Title">
+          <div className="Title">
             Evan Fioritto
-          </h1>
+          </div>
           
           <div className="Links">
               <a target="_blank" href="https://devpost.com/fiorittoev" rel="noreferrer"><img src={devpostLogo} className="Devpost-logo" alt="devpost"/></a>
@@ -31,9 +31,17 @@ function Home() {
               <a target="_blank" href="https://www.linkedin.com/in/evanfioritto/" rel="noreferrer"><img src={linkedInLogo} className="Linkedin-logo" alt="linkedin"/></a>
           </div>
 
-          <h2 className="Desc">
-            Junior in CS and IT at Michigan State University
-          </h2>
+          <div className="Desc">
+            Junior @ Michigan State University majoring in Computer Science and minoring in Information Technology
+        
+          </div>
+
+          <div className="Coursework">
+            Coursework
+            <p className="Coursework-body">
+              hello
+            </p>
+          </div>
 
         </header>
 

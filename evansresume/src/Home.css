@@ -1,5 +1,30 @@
+/*
+Mobile Layout
+*/
+.Right-panel{width:0%;height:0%;}
+.Left-panel{width:0%;height:0%;}
+.Center-panel{height:100%;width:100%;}
+/*
+Desktop Layout
+*/
+@media only screen and (min-width:768px)
+{
+    .Center-panel{width:80%;height:10%;}
+
+    .Right-panel{width:10%;height:100%;}
+    .Right-panel{height:100%}
+
+    .Left-panel{width:10%}
+    .Left-panel{height:100%}
+}
+@font-face{
+    font-family: siteFont;
+    src: url(fonts/pixel.ttf)
+}
 .Home
 {
+    font-family: siteFont;
+    background-color: #9DCDC0;;
     display: flex;
     flex-direction:row;
     justify-content: left;
@@ -8,21 +33,15 @@
 
 .Right-panel
 {
-    background-color: #d8e2d1;
-    min-height: 1000vmin;
-    min-width: 5%;
 }
+
 .Left-panel
 {
-    background-color: #d8e2d1;
-    min-height: 1000vmin;
-    min-width: 5%;
 }
-.Home-header
+
+.Center-panel
 {
     background-color: #D9F4C7;
-    min-height: 1000vmin;
-    min-width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,4 +172,15 @@
     to {
       opacity: 100;
     }
+}
+.Coursework
+{
+    text-align: center;
+    opacity : 0;
+    animation : desc-fade-in 1.5s forwards; 
+    animation-delay: 1.5s;
+}
+.Coursework-body
+{
+
 }
