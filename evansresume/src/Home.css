@@ -1,23 +1,39 @@
 .Home
 {
-    text-align : center;
+    display: flex;
+    flex-direction:row;
+    justify-content: left;
+    align-items: center;
 }
 
+.Right-panel
+{
+    background-color: #d8e2d1;
+    min-height: 1000vmin;
+    min-width: 5%;
+}
+.Left-panel
+{
+    background-color: #d8e2d1;
+    min-height: 1000vmin;
+    min-width: 5%;
+}
 .Home-header
 {
     background-color: #D9F4C7;
-    min-height: 100vh;
+    min-height: 1000vmin;
+    min-width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
     font-size: calc(10px + 2vmin);
     color: #9DCDC0;
 }
 
 .Home-logo
 {
-    height: 20vmin;
+    height: calc(100px + 2vmin);
     pointer-events: none;
     animation: Home-logo-spin infinite 5s linear;
 }
@@ -34,7 +50,8 @@
 
 .Title
 {
-    animation : intro-fade-in 3s; 
+    text-align: center;
+    animation : intro-fade-in 2s forwards; 
 }
 
 @keyframes intro-fade-in 
@@ -47,16 +64,14 @@
     }
 }
 
-
 .Links
 {
-    margin-top: 5vmin;
     text-align: center;
 }
 
 .Devpost-logo
 {
-    height: 5vmin;
+    height: calc(20px + 2vmin);
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -78,7 +93,7 @@
 
 .Github-logo
 {
-    height: 5vmin;
+    height: calc(20px + 2vmin);
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -100,7 +115,7 @@
 
 .Linkedin-logo
 {
-    height: 5vmin;
+    height: calc(20px + 2vmin);
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -124,8 +139,10 @@
 
 .Desc
 {
-    animation : desc-fade-in 3s; 
-    animation-delay: 3s;
+    text-align: center;
+    opacity : 0;
+    animation : desc-fade-in 1.5s forwards; 
+    animation-delay: 1.5s;
 }
 @keyframes desc-fade-in 
 {
