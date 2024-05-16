@@ -7,9 +7,9 @@ import './Home.css';
 
 function Home() {
 
-    //const parallax = useParallax({
-    //  rotate:[0,100],
-    //});
+    const parallax = useParallax<HTMLDivElement>({
+      rotate:[0,360],
+    });
 
     return (
       <div className="Home">
@@ -25,19 +25,26 @@ function Home() {
             Evan Fioritto
           </div>
           
-          <div className="Links">
+          <div  className="Links">
               <a target="_blank" href="https://devpost.com/fiorittoev" rel="noreferrer"><img src={devpostLogo} className="Devpost-logo" alt="devpost"/></a>
               <a target="_blank" href="https://github.com/fiorittoev" rel="noreferrer"><img src={githubLogo} className="Github-logo" alt="github" /></a>
               <a target="_blank" href="https://www.linkedin.com/in/evanfioritto/" rel="noreferrer"><img src={linkedInLogo} className="Linkedin-logo" alt="linkedin"/></a>
           </div>
 
           <div className="Desc">
-            Junior @ Michigan State University majoring in Computer Science and minoring in Information Technology
-        
+            Junior @ Michigan State University<br></br>Major : Computer Science<br></br>Minor : Information Technology
+          </div>
+
+          <div className="Objective">
+            Objective
+            <p className="Objective-body">
+            Looking to apply and expand upon my technical and cooperative skills in a professional
+            environment within the field of software design
+            </p>
           </div>
 
           <div className="Coursework">
-            Coursework
+            Relevant Coursework
             <p className="Coursework-body">
               hello
             </p>
