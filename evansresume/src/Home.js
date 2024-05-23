@@ -32,7 +32,9 @@ function Home() {
           </div>
 
           <div className="Desc">
-            Junior @ Michigan State University<br></br>Major : Computer Science<br></br>Minor : Information Technology
+            Junior @ Michigan State University<br></br>
+            Major : Computer Science<br></br>
+            Minor : Information Technology
           </div>
 
           <div className="Objective">
@@ -49,7 +51,6 @@ function Home() {
               hello
             </p>
           </div>
-
         </header>
 
         <div className="Right-panel">
