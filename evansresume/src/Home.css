@@ -7,7 +7,7 @@ Mobile Layout
 /*
 Desktop Layout
 */
-@media only screen and (min-width:150px)
+@media only screen and (min-width:768px)
 {
     .Center-panel{width:80%;height:10%;}
 
@@ -17,21 +17,25 @@ Desktop Layout
     .Left-panel{width:10%}
     .Left-panel{height:100%}
 }
-@font-face{
+
+@font-face
+{
     font-family: pixelFont;
     src: url(fonts/pixel.ttf)
 }
-@font-face{
+@font-face
+{
     font-family: bodyFont;
     src: url(fonts/firacode.ttf)
 }
+
 .Home
 {
     font-family: pixelFont;
     background-color: #9DCDC0;
     display: flex;
-    flex-direction:row;
-    justify-content: left;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
@@ -48,10 +52,9 @@ Desktop Layout
 .Center-panel
 {
     background-color: #D9F4C7;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: top;
+    justify-content: center;
     font-size: calc(10px + 2vmin);
     color: #9DCDC0;
 }
@@ -125,7 +128,7 @@ Desktop Layout
     margin-left: 1vmin;
     margin-right: 1vmin;
 
-    transition:0.5s;
+    transition: 0.5s;
     transform: scale(1);
 
     pointer-events: auto;
@@ -165,10 +168,34 @@ Desktop Layout
 .Desc
 {
     text-align: center;
+    overflow:hidden;
+    border-right:.1em5#9DCDC0;
+    margin:0 auto;
+    white-space: nowrap;
+    letter-spacing: .15em;
     opacity : 0;
-    animation : desc-fade-in 1.5s forwards; 
-    animation-delay: 1.5s;
+    animation: typing 3.5s steps(40,end) forwards,
+    blink-caret .75s step-end infinite ;
+    animation-delay: 2s;
 }
+
+
+@keyframes typing
+{
+    
+    from {width:0;
+        opacity:100;}
+    to {width:100%; 
+        opacity:100;}
+}
+
+@keyframes blink-caret
+{
+    from,to{border-color:transparent}
+    50%{border-color:#9DCDC0;}
+}
+
+
 @keyframes desc-fade-in 
 {
     from {
@@ -188,6 +215,7 @@ Desktop Layout
 .Objective-body
 {
     font-family: bodyFont;
+    padding-bottom: 5%;
 }
 
 .Coursework

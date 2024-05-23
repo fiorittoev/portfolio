@@ -7,10 +7,8 @@ import './Home.css';
 
 function Home() {
 
-    const parallax = useParallax<HTMLDivElement>({
-      rotate:[0,360],
-    });
-
+    const objMoveUp = useParallax({speed:30});
+    const workMoveIn = useParallax({translateX:['-300px','900px']});
     return (
       <div className="Home">
 
@@ -25,7 +23,7 @@ function Home() {
             Evan Fioritto
           </div>
           
-          <div  className="Links">
+          <div className="Links">
               <a target="_blank" href="https://devpost.com/fiorittoev" rel="noreferrer"><img src={devpostLogo} className="Devpost-logo" alt="devpost"/></a>
               <a target="_blank" href="https://github.com/fiorittoev" rel="noreferrer"><img src={githubLogo} className="Github-logo" alt="github" /></a>
               <a target="_blank" href="https://www.linkedin.com/in/evanfioritto/" rel="noreferrer"><img src={linkedInLogo} className="Linkedin-logo" alt="linkedin"/></a>
@@ -37,7 +35,7 @@ function Home() {
             Minor : Information Technology
           </div>
 
-          <div className="Objective">
+          <div ref={objMoveUp.ref} className="Objective">
             Objective
             <p className="Objective-body">
             Looking to apply and expand upon my technical and cooperative skills in a professional
@@ -45,7 +43,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="Coursework">
+          <div ref={workMoveIn.ref} className="Coursework">
             Relevant Coursework
             <p className="Coursework-body">
               hello
