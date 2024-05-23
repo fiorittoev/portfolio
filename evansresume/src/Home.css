@@ -7,7 +7,7 @@ Mobile Layout
 /*
 Desktop Layout
 */
-@media only screen and (min-width:768px)
+@media only screen and (min-width:200px)
 {
     .Center-panel{width:80%;height:10%;}
 
@@ -59,14 +59,8 @@ Desktop Layout
     color: #9DCDC0;
 }
 
-.Home-logo
-{
-    height: calc(100px + 2vmin);
-    pointer-events: none;
-    animation: Home-logo-spin infinite 5s linear;
-}
 
-@keyframes Home-logo-spin 
+@keyframes spin 
 {
     from {
       transform: rotate(0deg);
@@ -94,12 +88,15 @@ Desktop Layout
 
 .Links
 {
+    animation : intro-fade-in 2s forwards; 
     text-align: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Devpost-logo
 {
-    height: calc(20px + 2vmin);
+    height: calc(10px + 2vmin);
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -121,7 +118,7 @@ Desktop Layout
 
 .Github-logo
 {
-    height: calc(20px + 2vmin);
+    height: calc(10px + 2vmin);
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -143,7 +140,7 @@ Desktop Layout
 
 .Linkedin-logo
 {
-    height: calc(20px + 2vmin);
+    height: calc(10px + 2vmin);
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -209,13 +206,17 @@ Desktop Layout
 
 .Objective
 {
+    background-color: #F5F5DC;
+    color:grey;
     text-align: center;
 }
 
 .Objective-body
 {
+    
     font-family: bodyFont;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
+    font-size: calc(5px + 2vmin);
 }
 
 .Coursework
@@ -228,5 +229,7 @@ Desktop Layout
 
 .Coursework-body
 {
+    text-align: right;
     font-family: bodyFont;
+    font-size: calc(5px + 2vmin);
 }

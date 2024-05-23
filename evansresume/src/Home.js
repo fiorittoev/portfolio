@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import devpostLogo from './images/devpost.png';
 import githubLogo from './images/github.png';
 import linkedInLogo from './images/linkedin.png';
@@ -7,8 +6,25 @@ import './Home.css';
 
 function Home() {
 
-    const objMoveUp = useParallax({speed:30});
-    const workMoveIn = useParallax({translateX:['-300px','900px']});
+    const objMoveUp = useParallax
+    (
+      {
+        startScroll:0,
+        endScroll:50,
+        translateY:[125,0]
+      }
+    );
+
+    const workMoveIn = useParallax
+    (
+      {
+        startScroll:0,
+        endScroll:50,
+        translateX:[250,0]
+      }
+    );
+
+
     return (
       <div className="Home">
 
@@ -16,8 +32,6 @@ function Home() {
         </div>
 
         <header className="Center-panel">
-
-          <img src={logo} className="Home-logo" alt="logo" />
 
           <div className="Title">
             Evan Fioritto
@@ -46,7 +60,12 @@ function Home() {
           <div ref={workMoveIn.ref} className="Coursework">
             Relevant Coursework
             <p className="Coursework-body">
-              hello
+              Calculus I
+            <br></br>
+              Calculus II
+            <br></br>
+              Calculus III
+            <br></br>
             </p>
           </div>
         </header>
