@@ -12,10 +12,8 @@ Desktop Layout
     .Center-panel{width:80%;height:10%;}
 
     .Right-panel{width:10%;height:100%;}
-    .Right-panel{height:100%}
 
-    .Left-panel{width:10%}
-    .Left-panel{height:100%}
+    .Left-panel{width:10%;height:100%}
 }
 
 @font-face
@@ -206,8 +204,8 @@ Desktop Layout
 
 .Objective
 {
-    background-color: #F5F5DC;
-    color:grey;
+    background-color: #9DCDC0;
+    color:#D9F4C7;
     text-align: center;
 }
 
