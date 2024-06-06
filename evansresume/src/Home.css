@@ -7,7 +7,7 @@ Mobile Layout
 /*
 Desktop Layout
 */
-@media only screen and (min-width:200px)
+@media only screen and (min-width:768px)
 {
     .Center-panel{width:80%;height:10%;}
 
@@ -70,6 +70,7 @@ Desktop Layout
 
 .Title
 {
+    font-size:10vmin;
     text-align: center;
     animation : intro-fade-in 2s forwards; 
 }
@@ -94,7 +95,7 @@ Desktop Layout
 
 .Devpost-logo
 {
-    height: calc(10px + 2vmin);
+    height: 5vmin;
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -116,7 +117,7 @@ Desktop Layout
 
 .Github-logo
 {
-    height: calc(10px + 2vmin);
+    height: 5vmin;
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -138,7 +139,7 @@ Desktop Layout
 
 .Linkedin-logo
 {
-    height: calc(10px + 2vmin);
+    height: 5vmin;
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -215,7 +216,7 @@ Desktop Layout
     
     font-family: bodyFont;
     padding-bottom: 10%;
-    font-size: calc(5px + 2vmin);
+    font-size: 2vmin;
 }
 
 .Coursework
