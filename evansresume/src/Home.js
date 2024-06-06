@@ -1,6 +1,7 @@
 import devpostLogo from './images/devpost.png';
 import githubLogo from './images/github.png';
 import linkedInLogo from './images/linkedin.png';
+import bulletPoint from './images/bulletPoint.png';
 import {useParallax} from "react-scroll-parallax";
 import './Home.css';
 
@@ -10,16 +11,17 @@ function Home() {
     (
       {
         startScroll:0,
-        endScroll:50,
-        translateY:[125,0]
+        endScroll:40,
+        translateY:[150,0]
       }
     );
 
     const workMoveIn = useParallax
     (
       {
-        startScroll:0,
+        startScroll:40,
         endScroll:50,
+        opacity:[1,0],
         translateX:[250,0]
       }
     );
@@ -60,12 +62,27 @@ function Home() {
           <div ref={workMoveIn.ref} className="Coursework">
             Relevant Coursework
             <p className="Coursework-body">
-              Calculus I
-            <br></br>
-              Calculus II
-            <br></br>
-              Calculus III
-            <br></br>
+              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
+                College Algebra and Trigonometry
+              <br></br>
+              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
+                Calculus I
+              <br></br>
+                <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
+                Calculus II
+              <br></br>
+              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
+                Calculus III
+              <br></br>
+              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
+                Physics I
+              <br></br>
+              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
+                Physics II
+              <br></br>
+              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
+                
+              <br></br>
             </p>
           </div>
         </header>
