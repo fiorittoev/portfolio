@@ -1,31 +1,12 @@
 import devpostLogo from './images/devpost.png';
 import githubLogo from './images/github.png';
+import profilePhoto from './images/evan.png';
 import linkedInLogo from './images/linkedin.png';
 import bulletPoint from './images/bulletPoint.png';
 import {useParallax} from "react-scroll-parallax";
 import './Home.css';
 
 function Home() {
-
-    const objMoveUp = useParallax
-    (
-      {
-        startScroll:0,
-        endScroll:40,
-        translateY:[150,0]
-      }
-    );
-
-    const workMoveIn = useParallax
-    (
-      {
-        startScroll:40,
-        endScroll:50,
-        opacity:[1,0],
-        translateX:[250,0]
-      }
-    );
-
 
     return (
       <div className="Home">
@@ -34,6 +15,7 @@ function Home() {
         </div>
 
         <header className="Center-panel">
+          <img src={profilePhoto} className="Profile-photo" alt="evan"/>
 
           <div className="Title">
             Evan Fioritto
@@ -48,18 +30,19 @@ function Home() {
           <div className="Desc">
             Junior @ Michigan State University<br></br>
             Major : Computer Science<br></br>
-            Minor : Information Technology
+            Minor : Information Technology<br></br>
+            Concenteration in Software Engineering
           </div>
 
-          <div ref={objMoveUp.ref} className="Objective">
-            Objective
+          <div className="Objective">
+            Objective Statement
             <p className="Objective-body">
             Looking to apply and expand upon my technical and cooperative skills in a professional
             environment within the field of software design
             </p>
           </div>
 
-          <div ref={workMoveIn.ref} className="Coursework">
+          <div className="Coursework">
             Relevant Coursework
             <p className="Coursework-body">
               <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
@@ -81,7 +64,6 @@ function Home() {
                 Physics II
               <br></br>
               <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
-                
               <br></br>
             </p>
           </div>
@@ -89,8 +71,6 @@ function Home() {
 
         <div className="Right-panel">
         </div>
-
-
       </div>
     );
   }

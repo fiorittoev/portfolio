@@ -7,7 +7,7 @@ Mobile Layout
 /*
 Desktop Layout
 */
-@media only screen and (min-width:200px)
+@media only screen and (min-width:1200px)
 {
     .Center-panel{width:80%;height:10%;}
 
@@ -55,11 +55,18 @@ Desktop Layout
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(9px + 2vmin);
     color: #9DCDC0;
 }
 
 
+.Profile-photo
+{
+    width:25%;
+    height:25%;
+    flex-direction: column;
+    align-items: center;
+}
 @keyframes spin 
 {
     from {
@@ -70,10 +77,38 @@ Desktop Layout
     }
 }
 
+@keyframes sway-left
+{
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(35deg);
+    }
+}
+
+@keyframes sway
+{
+    0% 
+    {
+        transform: rotate(-5deg);
+    }
+    50% 
+    {
+        transform: rotate(5deg);
+    }
+    100%
+    {
+        transform: rotate(-5deg);
+    }
+
+}
+
 .Title
 {
     text-align: center;
-    animation : intro-fade-in 2s forwards; 
+    font-size: calc(15px + 2vmin);
+    animation : intro-fade-in 2s forwards, sway 3s infinite linear; 
 }
 
 @keyframes intro-fade-in 
@@ -172,6 +207,7 @@ Desktop Layout
     white-space: nowrap;
     letter-spacing: .15em;
     opacity : 0;
+    font-size: calc(9px + 2vmin);
     animation: typing 3.5s steps(40,end) forwards,
     blink-caret .75s step-end infinite ;
     animation-delay: 2s;
@@ -207,16 +243,18 @@ Desktop Layout
 
 .Objective
 {
-    background-color: #F5F5DC;
-    color:grey;
+    background-color: #9DCDC0;
+    color:#D9F4C7;
     text-align: center;
+    height:flex;
+    padding-bottom:1%;
+    padding-top:1%;
 }
 
 .Objective-body
 {
     
     font-family: bodyFont;
-    padding-bottom: 10%;
     font-size: calc(5px + 2vmin);
 }
 
@@ -233,7 +271,6 @@ Desktop Layout
     text-align: right;
     font-family: bodyFont;
     font-size: calc(5px + 2vmin);
-
     padding-left: 50px;
     padding-right: 50px;
 }
