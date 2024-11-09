@@ -2,7 +2,7 @@ import devpostLogo from './images/devpost.png';
 import githubLogo from './images/github.png';
 import profilePhoto from './images/evan.png';
 import linkedInLogo from './images/linkedin.png';
-import bulletPoint from './images/bulletPoint.png';
+import Coursework from './components/coursework';
 import './Home.css';
 
 function Home() {
@@ -23,10 +23,12 @@ function Home() {
                 
                 <div className="Desc">
                   <div className="Title">Evan Fioritto</div>
-                  Junior @ Michigan State University<br></br>
-                  Major : Computer Science<br></br>
-                  Minor : Information Technology<br></br>
-                  Concenteration in Software Engineering
+                  <b>Junior</b> @ Michigan State University<br></br>
+                  <b>Major</b> : Computer Science<br></br>
+                  <b>Minor</b> : Information Technology<br></br>
+                  <p style={{fontSize: 'calc(5px + 2vmin)'}}>
+                    <i>Concentration in Software Engineering</i>
+                  </p>
                   <div className="Links">
                     <a target="_blank" href="https://devpost.com/fiorittoev" rel="noreferrer"><img src={devpostLogo} className="logo" alt="devpost"/></a>
                     <a target="_blank" href="https://github.com/fiorittoev" rel="noreferrer"><img src={githubLogo} className="logo" alt="github" /></a>
@@ -49,31 +51,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="Coursework">
-            Relevant Coursework
-            <p className="Coursework-body">
-              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
-                College Algebra and Trigonometry
-              <br></br>
-              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
-                Calculus I
-              <br></br>
-                <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
-                Calculus II
-              <br></br>
-              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
-                Calculus III
-              <br></br>
-              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
-                Physics I
-              <br></br>
-              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
-                Physics II
-              <br></br>
-              <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point"></img>
-              <br></br>
-            </p>
-          </div>
+          <Coursework />
         </header>
 
         <div className="Right-panel">

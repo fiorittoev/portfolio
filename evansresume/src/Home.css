@@ -79,6 +79,7 @@ Desktop Layout
 
 .Profile-details
 {
+    width: 100%;
     flex-direction: row;
     align-items: flex-start;
     display: flex;
@@ -116,49 +117,14 @@ Desktop Layout
     position: relative;
     animation: slideIn 1s ease-out forwards
 }
-@keyframes spin 
-{
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-}
 
-@keyframes sway-left
-{
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(35deg);
-    }
-}
-
-@keyframes sway
-{
-    0% 
-    {
-        transform: rotate(-3deg);
-    }
-    50% 
-    {
-        transform: rotate(3deg);
-    }
-    100%
-    {
-        transform: rotate(-3deg);
-    }
-
-}
 
 .Title
 {
     text-align: left;
     font-size: calc(15px + 2vmin);
-    margin-bottom: 10%;
-    animation : slideDown 2s ease-out forwards, sway 4s infinite linear; 
+    margin-bottom: 1%;
+    animation : slideDown 1s ease-out forwards; 
 }
 
 @keyframes intro-fade-in 
@@ -174,21 +140,18 @@ Desktop Layout
 .Links
 {
     animation : intro-fade-in 2s forwards; 
-    text-align: center;
+    text-align: left;
     flex-direction: row;
     align-items: left;
     opacity: 0;
-    animation-delay: 4s;
 }
 .logo
 {
     height: 5vmin;
-
     margin-top: 1vmin;
     margin-bottom: 1vmin;
     margin-left: 1vmin;
     margin-right: 1vmin;
-
     transition:0.5s;
     transform: scale(1);
 
@@ -211,18 +174,17 @@ Desktop Layout
     letter-spacing: .15em;
     opacity : 0;
     font-size: calc(9px + 2vmin);
-    animation: typing 3.5s steps(40,end) forwards;
+    animation: intro-fade-in 1s forwards, typing 5s steps(60,end) forwards;
     animation-delay: 2s;
 }
+
 
 
 @keyframes typing
 {
     
-    from {width:0;
-        opacity:0;}
-    to {width:100%;
-        opacity:1; }
+    from {width:0;}
+    to {width:100%;}
 }
 
 @keyframes desc-fade-in 
@@ -244,11 +206,16 @@ Desktop Layout
     height:flex;
     padding-bottom:1%;
     padding-top:1%;
+    animation: slideIn 1s forwards ease-in;
+    opacity: 0;
+    animation-delay: 5s
 }
 
 .Objective-body
 {
-    
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: left;
     font-family: bodyFont;
     font-size: calc(5px + 2vmin);
 }
@@ -257,17 +224,48 @@ Desktop Layout
 {
     text-align: center;
     opacity : 0;
-    animation : desc-fade-in 1.5s forwards;
-    animation-delay: 1.5s;
+    animation : slideIn 1.5s forwards;
+    animation-delay: 5s;
+    margin-top: 2%;
+}
+
+.Coursework-header
+{
+    margin-bottom: 2%;
+    padding: 12px 24px;
+    font-family: pixelFont;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover and focus effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .Coursework-body
 {
     text-align: right;
-    font-family: bodyFont;
     font-size: calc(5px + 2vmin);
     padding-left: 50px;
     padding-right: 50px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s east-out;
+}
+.Coursework-body.open{
+    max-height: 1000px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .Bullet-Point
