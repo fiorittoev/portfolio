@@ -1,10 +1,13 @@
 :root
 {
-    --background-color: #9DCDC0;
-    --text-color: #D9F4C7;
+    --tiel: #9DCDC0;
+    --green: #D9F4C7;
+    --black: #545454;
+    --red: #D5B9B2;
+    --purple: #e8d7f1
 }
 html, body {
-    background-color: var(--text-color);
+    background-color: var(--green);
     height: 100%;
     margin: 0;
     padding: 0;
@@ -41,7 +44,7 @@ Desktop Layout
 .Home
 {
     font-family: pixelFont;
-    background-color: var(--text-color);
+    background-color: var(--green);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,28 +55,30 @@ Desktop Layout
 
 .Left-panel, .Right-panel, .Center-panel {
     height: 100%; /* Match parent height */
-    background-color: var(--background-color);
+    background-color: var(--tiel);
 }
 
 .Center-panel
 {
-    background-color: var(--text-color);
+    background-color: var(--green);
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     font-size: calc(9px + 2vmin);
-    color: var(--background-color);
+    color: var(--black);
 }
 
 .Profile
 {
     flex-direction: row;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
     margin-left: 2%;
     margin-top: 2%;
     margin-right: 2%;
-    margin-left:2%;
     margin-bottom: 2%;
 }
 
@@ -81,10 +86,11 @@ Desktop Layout
 {
     width: 100%;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }
+
 @keyframes slideIn {
     from {
         transform: translateX(-100%);
@@ -108,10 +114,9 @@ Desktop Layout
 .Profile-photo
 {
     align-items: left;
-    width: 35vmin;
-    height: 35vmin;
+    width:15vmax;
+    height: 15vmax;
     margin-top: 5%;
-    margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
     position: relative;
@@ -121,9 +126,10 @@ Desktop Layout
 
 .Title
 {
-    text-align: left;
+    text-align: center;
     font-size: calc(15px + 2vmin);
     margin-bottom: 1%;
+    background-color: var(--tiel);
     animation : slideDown 1s ease-out forwards; 
 }
 
@@ -142,8 +148,8 @@ Desktop Layout
     animation : intro-fade-in 2s forwards; 
     text-align: left;
     flex-direction: row;
-    align-items: left;
     opacity: 0;
+    animation-delay: 5s;
 }
 .logo
 {
@@ -168,14 +174,13 @@ Desktop Layout
 {
     text-align: left;
     overflow:hidden;
-    padding-bottom: 10px;
     white-space: nowrap;
     margin-top: 5%;
     letter-spacing: .15em;
     opacity : 0;
-    font-size: calc(9px + 2vmin);
-    animation: intro-fade-in 1s forwards, typing 5s steps(60,end) forwards;
-    animation-delay: 2s;
+    font-size: 3.5vmin;
+    animation: intro-fade-in 1s forwards, typing 5s steps(70,end) forwards;
+    animation-delay: 1s;
 }
 
 
@@ -200,8 +205,8 @@ Desktop Layout
 
 .Objective
 {
-    background-color: var(--background-color);
-    color:var(--text-color);
+    background-color: var(--tiel);
+    color:var(--black);
     text-align: center;
     height:flex;
     padding-bottom:1%;
@@ -213,31 +218,32 @@ Desktop Layout
 
 .Objective-body
 {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: left;
     font-family: bodyFont;
-    font-size: calc(5px + 2vmin);
+    font-size: 2vmin;
 }
 
-.Coursework
+.Details-section
 {
     text-align: center;
     opacity : 0;
     animation : slideIn 1.5s forwards;
     animation-delay: 5s;
     margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
-.Coursework-header
+.Details-header
 {
-    margin-bottom: 2%;
     padding: 12px 24px;
     font-family: pixelFont;
-    font-size: 16px;
-    font-weight: 600;
-    background-color: #4CAF50; /* Green background */
-    color: white;
+    font-size: 3vmin;
+    background-color: var(--tiel); /* Green background */
+    color: var(--black);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -245,17 +251,17 @@ Desktop Layout
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.Coursework-body
+.Details-body
 {
-    text-align: right;
-    font-size: calc(5px + 2vmin);
-    padding-left: 50px;
-    padding-right: 50px;
+    margin-top: 2%;
+    text-align:center;
+    font-family: bodyFont;
+    font-size: 2vmin;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s east-out;
 }
-.Coursework-body.open{
+.Details-body.open{
     max-height: 1000px;
 }
 
@@ -270,10 +276,8 @@ Desktop Layout
 
 .Bullet-Point
 {
-    height: calc(2vmin);
-    padding-bottom: 0.5vmin;
-    padding-top: 0.5vmin;
-    padding-left: 1vmin;
-    padding-right: 1vmin;
+    height: 1.5vmin;
+    margin-top: 1.2vmin;
+    margin-right: 0.5vmin;
     animation: spin 3s infinite linear;
 }
