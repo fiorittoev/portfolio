@@ -11,6 +11,14 @@ function Home() {
     return (
       <div className="Home">
 
+        <div className="NavBar">
+          <div className="Links">
+              <a target="_blank" href="https://devpost.com/fiorittoev" rel="noreferrer"><img src={devpostLogo} className="Devpost-logo" alt="devpost"/></a>
+              <a target="_blank" href="https://github.com/fiorittoev" rel="noreferrer"><img src={githubLogo} className="Github-logo" alt="github" /></a>
+              <a target="_blank" href="https://www.linkedin.com/in/evanfioritto/" rel="noreferrer"><img src={linkedInLogo} className="Linkedin-logo" alt="linkedin"/></a>
+          </div>
+        </div>
+
         <div className="Left-panel">
         </div>
 
@@ -21,11 +29,7 @@ function Home() {
             Evan Fioritto
           </div>
           
-          <div className="Links">
-              <a target="_blank" href="https://devpost.com/fiorittoev" rel="noreferrer"><img src={devpostLogo} className="Devpost-logo" alt="devpost"/></a>
-              <a target="_blank" href="https://github.com/fiorittoev" rel="noreferrer"><img src={githubLogo} className="Github-logo" alt="github" /></a>
-              <a target="_blank" href="https://www.linkedin.com/in/evanfioritto/" rel="noreferrer"><img src={linkedInLogo} className="Linkedin-logo" alt="linkedin"/></a>
-          </div>
+          
 
           <div className="Desc">
             Junior @ Michigan State University<br></br>

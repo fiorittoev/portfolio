@@ -12,10 +12,8 @@ Desktop Layout
     .Center-panel{width:80%;height:10%;}
 
     .Right-panel{width:10%;height:100%;}
-    .Right-panel{height:100%}
 
-    .Left-panel{width:10%}
-    .Left-panel{height:100%}
+    .Left-panel{width:10%;height:100%}
 }
 
 @font-face
@@ -106,6 +104,7 @@ Desktop Layout
 
 .Title
 {
+    font-size:10vmin;
     text-align: center;
     font-size: calc(15px + 2vmin);
     animation : intro-fade-in 2s forwards, sway 3s infinite linear; 
@@ -131,7 +130,7 @@ Desktop Layout
 
 .Devpost-logo
 {
-    height: calc(10px + 2vmin);
+    height: 5vmin;
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -153,7 +152,7 @@ Desktop Layout
 
 .Github-logo
 {
-    height: calc(10px + 2vmin);
+    height: 5vmin;
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -175,7 +174,7 @@ Desktop Layout
 
 .Linkedin-logo
 {
-    height: calc(10px + 2vmin);
+    height: 5vmin;
 
     margin-top: 1vmin;
     margin-bottom: 1vmin;
@@ -243,6 +242,8 @@ Desktop Layout
 
 .Objective
 {
+    background-color: #9DCDC0;
+    color:#D9F4C7;
     background-color: #9DCDC0;
     color:#D9F4C7;
     text-align: center;
