@@ -1,3 +1,14 @@
+:root
+{
+    --background-color: #9DCDC0;
+    --text-color: #D9F4C7;
+}
+html, body {
+    background-color: var(--text-color);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 /*
 Mobile Layout
 */
@@ -30,40 +41,80 @@ Desktop Layout
 .Home
 {
     font-family: pixelFont;
-    background-color: #9DCDC0;
+    background-color: var(--text-color);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.Right-panel
-{
-    background-color: #9DCDC0;
-}
-
-.Left-panel
-{
-    background-color: #9DCDC0;
+.Left-panel, .Right-panel, .Center-panel {
+    height: 100%; /* Match parent height */
+    background-color: var(--background-color);
 }
 
 .Center-panel
 {
-    background-color: #D9F4C7;
+    background-color: var(--text-color);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(9px + 2vmin);
-    color: #9DCDC0;
+    color: var(--background-color);
 }
 
+.Profile
+{
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left:2%;
+    margin-bottom: 2%;
+}
 
+.Profile-details
+{
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+    justify-content: left;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 .Profile-photo
 {
-    width:25%;
-    height:25%;
-    flex-direction: column;
-    align-items: center;
+    align-items: left;
+    width: 35vmin;
+    height: 35vmin;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    position: relative;
+    animation: slideIn 1s ease-out forwards
 }
 @keyframes spin 
 {
@@ -89,25 +140,25 @@ Desktop Layout
 {
     0% 
     {
-        transform: rotate(-5deg);
+        transform: rotate(-3deg);
     }
     50% 
     {
-        transform: rotate(5deg);
+        transform: rotate(3deg);
     }
     100%
     {
-        transform: rotate(-5deg);
+        transform: rotate(-3deg);
     }
 
 }
 
 .Title
 {
-    font-size:10vmin;
-    text-align: center;
+    text-align: left;
     font-size: calc(15px + 2vmin);
-    animation : intro-fade-in 2s forwards, sway 3s infinite linear; 
+    margin-bottom: 10%;
+    animation : slideDown 2s ease-out forwards, sway 4s infinite linear; 
 }
 
 @keyframes intro-fade-in 
@@ -124,11 +175,12 @@ Desktop Layout
 {
     animation : intro-fade-in 2s forwards; 
     text-align: center;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: left;
+    opacity: 0;
+    animation-delay: 4s;
 }
-
-.Devpost-logo
+.logo
 {
     height: 5vmin;
 
@@ -142,55 +194,8 @@ Desktop Layout
 
     pointer-events: auto;
 }
-
-.Devpost-logo:hover
+.logo:hover
 {
-    transition:0.5s;
-    transform: scale(1.5);
-    rotate: 2;
-}
-
-.Github-logo
-{
-    height: 5vmin;
-
-    margin-top: 1vmin;
-    margin-bottom: 1vmin;
-    margin-left: 1vmin;
-    margin-right: 1vmin;
-
-    transition: 0.5s;
-    transform: scale(1);
-
-    pointer-events: auto;
-}
-
-.Github-logo:hover
-{
-    transition:0.5s;
-    transform: scale(1.5);
-    rotate: 2;
-}
-
-.Linkedin-logo
-{
-    height: 5vmin;
-
-    margin-top: 1vmin;
-    margin-bottom: 1vmin;
-    margin-left: 1vmin;
-    margin-right: 1vmin;
-
-    transition:0.5s;
-    transform: scale(1);
-
-    pointer-events: auto;
-     
-}
-
-.Linkedin-logo:hover
-{
-    
     transition:0.5s;
     transform: scale(1.5);
     rotate: 2;
@@ -198,17 +203,15 @@ Desktop Layout
 
 .Desc
 {
-    text-align: center;
+    text-align: left;
     overflow:hidden;
-    border-right:.1em5#9DCDC0;
     padding-bottom: 10px;
-    margin:0 auto;
     white-space: nowrap;
+    margin-top: 5%;
     letter-spacing: .15em;
     opacity : 0;
     font-size: calc(9px + 2vmin);
-    animation: typing 3.5s steps(40,end) forwards,
-    blink-caret .75s step-end infinite ;
+    animation: typing 3.5s steps(40,end) forwards;
     animation-delay: 2s;
 }
 
@@ -217,17 +220,10 @@ Desktop Layout
 {
     
     from {width:0;
-        opacity:100;}
-    to {width:100%; 
-        opacity:100;}
+        opacity:0;}
+    to {width:100%;
+        opacity:1; }
 }
-
-@keyframes blink-caret
-{
-    from,to{border-color:transparent}
-    50%{border-color:#9DCDC0;}
-}
-
 
 @keyframes desc-fade-in 
 {
@@ -242,10 +238,8 @@ Desktop Layout
 
 .Objective
 {
-    background-color: #9DCDC0;
-    color:#D9F4C7;
-    background-color: #9DCDC0;
-    color:#D9F4C7;
+    background-color: var(--background-color);
+    color:var(--text-color);
     text-align: center;
     height:flex;
     padding-bottom:1%;

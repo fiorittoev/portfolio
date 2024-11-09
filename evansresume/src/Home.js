@@ -3,7 +3,6 @@ import githubLogo from './images/github.png';
 import profilePhoto from './images/evan.png';
 import linkedInLogo from './images/linkedin.png';
 import bulletPoint from './images/bulletPoint.png';
-import {useParallax} from "react-scroll-parallax";
 import './Home.css';
 
 function Home() {
@@ -11,31 +10,35 @@ function Home() {
     return (
       <div className="Home">
 
-        <div className="NavBar">
-          <div className="Links">
-              <a target="_blank" href="https://devpost.com/fiorittoev" rel="noreferrer"><img src={devpostLogo} className="Devpost-logo" alt="devpost"/></a>
-              <a target="_blank" href="https://github.com/fiorittoev" rel="noreferrer"><img src={githubLogo} className="Github-logo" alt="github" /></a>
-              <a target="_blank" href="https://www.linkedin.com/in/evanfioritto/" rel="noreferrer"><img src={linkedInLogo} className="Linkedin-logo" alt="linkedin"/></a>
-          </div>
-        </div>
-
         <div className="Left-panel">
         </div>
 
         <header className="Center-panel">
-          <img src={profilePhoto} className="Profile-photo" alt="evan"/>
 
-          <div className="Title">
-            Evan Fioritto
-          </div>
-          
-          
+          <div className="Profile">
 
-          <div className="Desc">
-            Junior @ Michigan State University<br></br>
-            Major : Computer Science<br></br>
-            Minor : Information Technology<br></br>
-            Concenteration in Software Engineering
+            <div className="Profile-details">
+
+                <img src={profilePhoto} className="Profile-photo" alt="evan"/>
+                
+                <div className="Desc">
+                  <div className="Title">Evan Fioritto</div>
+                  Junior @ Michigan State University<br></br>
+                  Major : Computer Science<br></br>
+                  Minor : Information Technology<br></br>
+                  Concenteration in Software Engineering
+                  <div className="Links">
+                    <a target="_blank" href="https://devpost.com/fiorittoev" rel="noreferrer"><img src={devpostLogo} className="logo" alt="devpost"/></a>
+                    <a target="_blank" href="https://github.com/fiorittoev" rel="noreferrer"><img src={githubLogo} className="logo" alt="github" /></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/evanfioritto/" rel="noreferrer"><img src={linkedInLogo} className="logo" alt="linkedin"/></a>
+                  </div>
+                </div>
+
+                
+            </div>
+
+              
+
           </div>
 
           <div className="Objective">
