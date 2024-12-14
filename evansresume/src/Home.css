@@ -21,9 +21,9 @@
     z-index: 9999; /* Ensures it appears on top of everything */
     pointer-events: none;
 }
-
 html, body {
     height: 100%;
+    width:100%;
     background-color: #D9F4C7;
 }
 
@@ -69,6 +69,9 @@ Desktop Layout
     padding: 0;
 }
 
+.Down-arrow{
+    width: 10%;
+}
 
 .Center-panel
 {
@@ -139,6 +142,7 @@ a.nav-link:visited
     margin: 5%;
     margin-top: 10%;
     margin-left: 0%;
+    margin-bottom: 0%;
 }
 
 .Profile-details
@@ -175,7 +179,6 @@ a.nav-link:visited
 {
     margin: 5%;
     margin-left: 0%;
-    margin-bottom: 5%;
     align-items: left;
     width: 20%;
     height: 20%;
@@ -197,8 +200,7 @@ a.nav-link:visited
     text-align: center;
     font-size: calc(20px + 2vmin);
     font-weight: 10px;
-    margin-bottom: 5%;
-    width:100%;
+    width:80%;
     background-color: var(--tiel);
     animation: slideDown 1s ease-out forwards;
     border-radius: 10px; /* Adjust this for more or less rounded corners */
@@ -275,7 +277,6 @@ a.nav-link:visited
 
 .Body
 {
-
     animation: slideIn 1s forwards ease-in;
     animation-delay: 5s;
     opacity: 0;
@@ -283,23 +284,25 @@ a.nav-link:visited
 
 .Objective
 {
-    background-color: var(--tiel);
     color:var(--black);
     text-align: center;
-    height:flex;
-    border-radius: 10px; /* Adjust this for more or less rounded corners */
-    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
-    margin: 5%;
-    padding: 2%;
-
+    width: 100%;
 }
 
 .Objective-body
 {
-    text-align: left;
+    background-color: var(--tiel);
+    border-radius: 10px; /* Adjust this for more or less rounded corners */
+    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
     font-family: bodyFont;
     font-size: 2vmin;
-    margin:5%;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:5%;
+    margin-bottom: 5%;
+    padding: 5%;
+    font-weight: normal;
 }
 
 .Experience-header
@@ -312,7 +315,10 @@ a.nav-link:visited
 {
     text-align: center;
     padding:2%;
-    margin:5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:5%;
+    margin-bottom: 5%;
     background-color: var(--tiel);
     border-radius: 10px; /* Adjust this for more or less rounded corners */
     box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
@@ -342,7 +348,7 @@ a.nav-link:visited
 .Details-section
 {
     text-align: center;
-    margin: 5%;
+    margin:1%;
 }
 .Details-header
 {
@@ -449,14 +455,39 @@ a.nav-link:visited
 .Project-title,
 .Award-title {
     font-weight: bold;
-    margin-top: 10px;
+    margin: 5%;
     text-align: center;
+}
+.Project-specs,
+.Award-specs {
+    margin: 2%;
+    text-align: center;
+}
+.Project-subtitle,
+.Award-subtitle {
+    text-align: center;
+    margin:2%;
+    height:100%;
+    width:100%;
 }
 
 .Project-body,
 .Award-body {
-    margin-top: 5px;
+    margin:2%;
+    height:100%;
+    width:100%;
     text-align: left;
     font-family: bodyFont;
     font-size: 2vmin;
+}
+.Project-link,
+.Award-link {
+    width: 100%;
+    height:100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures consistent cropping if needed */
+    max-width: 20px; /* Optional: Restrict maximum size */
+    max-height: 20px; /* Optional: Restrict maximum size */
+    padding: 5%; /* Removes unnecessary padding */
+    display: block; /* Ensures it is treated as a block for centering */
 }

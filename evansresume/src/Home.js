@@ -1,16 +1,19 @@
+import './Home.css';
 import devpostLogo from './images/devpost.png';
 import githubLogo from './images/github.png';
 import profilePhoto from './images/evan.png';
 import linkedInLogo from './images/linkedin.png';
 import Coursework from './components/coursework';
 import Proficiencies from './components/proficiencies';
-import './Home.css';
 import bulletPoint from './images/bulletPoint.png';
 import scanLines from './images/scanlines.gif';
 import velocIT from './images/velocit.png';
 import carbonCount from './images/carboncount.png';
 import system82 from './images/system82.png';
 import led from './images/ledphonecase.png';
+import pLink from './images/project-link.svg';
+import aLink from './images/award-link.svg';
+import downArrow from './images/down-arrow.gif';
 
 
 function Home() {
@@ -62,6 +65,7 @@ function Home() {
           </div>
 
           <div className="Body">
+            <img src={downArrow} className="Down-arrow" alt="down arrow" />
             <div id="about" className="Objective">
               <b>About Me</b>
               <p className="Objective-body">
@@ -110,12 +114,12 @@ function Home() {
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Collaborated in leveraging Groq AI API for skill summaries and tailored networking recommendations. <br/>
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Presented at MHacks 2024<br/>
                   </div>
-                  <div className="Project-link"></div>
+                  <a target="_blank" href="https://devpost.com/software/velocit" rel="noreferrer"><img src={pLink} className="Project-link" alt="project link"/></a>
                 </div>
                 <div className="Project">
                   <img className="Project-image" src={carbonCount} alt="Carbon count"/>
                   <div className="Project-title">CarbonCount</div>
-                  <div className="Project-specs"></div>
+                  <div className="Project-specs">Feb. 2024</div>
                   <div className="Project-subtitle">Competitive Emmisions Tracker</div>
                   <div className="Project-body">
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Built a full-stack web application using Node.js and HTML/CSS. <br/>
@@ -123,12 +127,12 @@ function Home() {
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Calculated and tracked users' carbon emissions during transit, enabling competition for the lowest emissions. <br/>
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Won "Best Auth0 Application" and "Best Use of Kintone" awards at Grizzhacks 6<br/>
                   </div>
-                  <div className="Project-link"></div>
+                  <a target="_blank" href="https://devpost.com/software/carboncounter" rel="noreferrer"><img src={pLink} className="Project-link" alt="project link"/></a>
                 </div>
                 <div className="Project">
                   <img className="Project-image" src={system82} alt="System82"/>
                   <div className="Project-title">System82</div>
-                  <div className="Project-specs"></div>
+                  <div className="Project-specs">Jan. 2024</div>
                   <div className="Project-subtitle">Interactive Puzzle Experience</div>
                   <div className="Project-body">
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Interactive Puzzle Experience <br/>
@@ -136,18 +140,18 @@ function Home() {
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Designed puzzles requiring users to manipulate and interact with webpage elements to advance. <br/>
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Won "Best Artistic Application" award at Sparahack 9.<br/>
                   </div>
-                  <div className="Project-link"></div>
+                  <a target="_blank" href="https://devpost.com/software/system82" rel="noreferrer"><img src={pLink} className="Project-link" alt="project link"/></a>
                 </div>
                 <div className="Project">
                   <img className="Project-image" src={led} alt="LED"/>
                   <div className="Project-title">LED Phone Case</div>
-                  <div className="Project-specs"></div>
+                  <div className="Project-specs">Jan. 2023</div>
                   <div className="Project-subtitle">Creative Hardware Prototype</div>
                   <div className="Project-body">
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Functional iPhone SE phone case design custom printed using Autodesk 360 outfitted to comfortably house and operate an Arduino-powered LED ring running user uploaded code. <br/>
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Designed for MSU Design Day and was a winner in the EGR 100 design competition. <br/>
                   </div>
-                  <div className="Project-link"></div>
+                  <a target="_blank" href="https://designday.msu.edu/wp-content/uploads/2023/04/Design_Day_Spring_2023_web_RED_final.pdf" rel="noreferrer"><img src={pLink} className="Project-link" alt="project link"/></a>
                 </div>
               </div>
             </div>
@@ -156,39 +160,39 @@ function Home() {
               <div className="Awards-body">
                 <div className="Award">
                   <div className="Award-title">John K Welch Endowed Scholarship</div>
-                  <div className="Award-specs"></div>
-                  <div className="Award-body"></div>
-                  <div className="Award-link"></div>
+                  <div className="Award-specs">Jul 2024</div>
+                  <div className="Award-body">"Recipients will be students who demonstrate financial need and who are pursuing degrees in the College of Engineering with a preference for students that have a focus on information technology in the healthcare industry."</div>
+                  <a target="_blank" href="https://finaid.msu.edu/undergrad/undergrad-scholarships/undergrad-scholarship-searches#stateprograms" rel="noreferrer"><img src={aLink} className="Award-link" alt="award link"/></a>
                 </div>
                 <div className="Award">
                   <div className="Award-title">Michigan Competitive Scholarship</div>
-                  <div className="Award-specs"></div>
-                  <div className="Award-body"></div>
-                  <div className="Award-link"></div>
+                  <div className="Award-specs">Jan 2023</div>
+                  <div className="Award-body">"The Michigan Competitive Scholarship is available to undergraduate students pursuing their first degree and is based on both financial need and merit. To be considered, a student must take the SAT (Class of 2017 and beyond) prior to entering college and achieve a qualifying score of at least 1200."</div>
+                  <a target="_blank" href="https://www.michigan.gov/mistudentaid/programs/michigan-competitive-scholarship" rel="noreferrer"><img src={aLink} className="Award-link" alt="award link"/></a>
                 </div>
                 <div className="Award">
                   <div className="Award-title">SpartaHack 9 Winner</div>
-                  <div className="Award-specs"></div>
-                  <div className="Award-body"></div>
-                  <div className="Award-link"></div>
+                  <div className="Award-specs">Jan 2024</div>
+                  <div className="Award-body">Interactive Media Track - Best Artistic Application: "You wonder how art and technology combine in the best way possible? The best artistic application in interactive media will show how that can be done!"</div>
+                  <a target="_blank" href="https://spartahack-9.devpost.com/" rel="noreferrer"><img src={aLink} className="Award-link" alt="award link"/></a>
                 </div>
                 <div className="Award">
                   <div className="Award-title">GrizzHacks 6 Winner</div>
                   <div className="Award-specs"></div>
                   <div className="Award-body"></div>
-                  <div className="Award-link"></div>
+                  <a target="_blank" href="https://grizzhacks-6.devpost.com/" rel="noreferrer"><img src={aLink} className="Award-link" alt="award link"/></a>
                 </div>
                 <div className="Award">
                   <div className="Award-title">MSU Design Day EGR 100 Winner</div>
                   <div className="Award-specs"></div>
                   <div className="Award-body"></div>
-                  <div className="Award-link"></div>
+                  <a target="_blank" href="https://designday.msu.edu/wp-content/uploads/2023/04/Design_Day_Spring_2023_web_RED_final.pdf" rel="noreferrer"><img src={aLink} className="Award-link" alt="award link"/></a>
                 </div>
                 <div className="Award">
                   <div className="Award-title">Dean's List</div>
                   <div className="Award-specs"></div>
                   <div className="Award-body"></div>
-                  <div className="Award-link"></div>
+                  <a target="_blank" href="https://reg.msu.edu/academicprograms/Print.aspx?Section=294" rel="noreferrer"><img src={aLink} className="Award-link" alt="award link"/></a>
                 </div>
               </div>
             </div>
