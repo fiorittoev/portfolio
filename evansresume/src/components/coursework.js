@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import bulletPoint from '../images/bulletPoint.png';
 const Coursework = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isCourseworkOpen, setIsCourseworkOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen); 
+  const toggleCourseworkDropdown = () => {
+    setIsCourseworkOpen(!isCourseworkOpen); 
   };
 
   return (
     <div className="Details-section">
-      <button className="Details-header" onClick={toggleDropdown}>
-        Show Relevant Coursework
+      <button className="Details-header" onClick={toggleCourseworkDropdown}>
+        <b>Show Relevant Coursework</b>
       </button>
-      <div className={`Details-body ${isOpen ? 'open' : ''}`}>
+      <div className={`Details-body ${isCourseworkOpen ? 'open' : ''}`}>
         <b>Planned Courses (Spring 2025)</b>: <br/><br/>
         <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Algorithm Engineering [CSE 431]<br />
         <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Web App Architecture and Development [CSE 477]<br />

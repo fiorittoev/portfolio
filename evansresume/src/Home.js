@@ -5,14 +5,32 @@ import linkedInLogo from './images/linkedin.png';
 import Coursework from './components/coursework';
 import Proficiencies from './components/proficiencies';
 import './Home.css';
+import bulletPoint from './images/bulletPoint.png';
+import scanLines from './images/scanlines.gif';
+import velocIT from './images/velocit.png';
+import carbonCount from './images/carboncount.png';
+import system82 from './images/system82.png';
+import led from './images/ledphonecase.png';
 
 
 function Home() {
 
     return (
+      
       <div className="Home">
-
-        <div className="Left-panel">
+        <div class="gif-overlay">
+          <img src={scanLines} alt="Overlay GIF"></img>
+        </div>
+        <div className = "NavBar"> 
+          <div className = "NavBarLeft">
+            Evan Fioritto
+          </div>
+          <div className="NavBarRight">
+            <a href="#about" class="nav-link">About </a>
+            <a href="#experience" class="nav-link">Experience </a>
+            <a href="#projects" class="nav-link">Projects </a>
+            <a href="#skills" class="nav-link">Skills</a>
+          </div>
         </div>
 
         <header className="Center-panel">
@@ -43,21 +61,143 @@ function Home() {
             </div>
           </div>
 
-          <div className="Objective">
-            About Me
-            <p className="Objective-body">
-            Looking to apply and expand upon my technical and cooperative skills in a professional
-            environment within the field of software design
-            </p>
+          <div className="Body">
+            <div id="about" className="Objective">
+              <b>About Me</b>
+              <p className="Objective-body">
+                <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Aspiring Software Engineer with hands-on experience as a Research Assistant where Python programs were designed to manage large datasets.<br />
+                <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Demonstrates a strong foundation in software engineering concepts, particularly through work on machine learning models with a focus on LSTM implementations.<br />
+                <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Skilled in programming languages and tools such as C++, Python, Git, and Selenium.<br />
+                <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Eager to apply analytical skills and technological expertise in contributing to strategic processes and supporting divisional needs in an internship position.<br />
+              </p>
+            </div>
+            <div id ="experience" className="Experience-header">
+              <b>Work Experience</b>
+              <div className="Experience-title">
+                Research Assistant II @ Michigan State University
+                <div className="Experience-specs">
+                  <i>May. 2024 - Nov. 2024</i>
+                </div>
+                <div className="Experience-detail">
+                  <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Led efforts to design and implement multiple python programs to scrape, track,<br />
+                  and manage desired files on a large scale from an online library to complete a dataset. <br/>
+                  <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Successfully procured and verified over 20,000 files via Selenium and OCR processing. <br/>
+                  <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Experimented with scaling up a LSTM machine learning model to predict and score integrative complexity of a body of text. <br/>
+                  <a target="_blank" href="https://github.com/fiorittoev/ARC-Collection-Script" rel="noreferrer ">Implementation Link</a>
+                </div>
+              </div>
+            </div>
+            <div id="projects" className="Projects-container">
+              <div className="Projects-title">
+                <b>Personal Projects</b>
+              </div>
+              <div className="Projects-body">
+                <div className="Project">
+                  <div className="Project-title">StreetMeet (In Progress)</div>
+                  <div className="Project-specs">Present</div>
+                  <div className="Project-body">
+                  </div>
+                  <div className="Project-link"></div>
+                </div>
+                <div className="Project">
+                  <img className="Project-image" src={velocIT} alt="VelocIT"/>
+                  <div className="Project-title">VelocIT</div>
+                  <div className="Project-specs">Oct. 2024</div>
+                  <div className="Project-subtitle">Career Fair Optimization App</div>
+                  <div className="Project-body">
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Developed backend infrastructure using Firebase for real-time data management, user authentication, and profile management <br/>
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Integrated geolocation services to connect users with nearby recruiters and facilitate networking. <br/>
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Collaborated in leveraging Groq AI API for skill summaries and tailored networking recommendations. <br/>
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Presented at MHacks 2024<br/>
+                  </div>
+                  <div className="Project-link"></div>
+                </div>
+                <div className="Project">
+                  <img className="Project-image" src={carbonCount} alt="Carbon count"/>
+                  <div className="Project-title">CarbonCount</div>
+                  <div className="Project-specs"></div>
+                  <div className="Project-subtitle">Competitive Emmisions Tracker</div>
+                  <div className="Project-body">
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Built a full-stack web application using Node.js and HTML/CSS. <br/>
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Integrated Google Maps API, Kintone, and Auth0 for user authentication and data storage. <br/>
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Calculated and tracked users' carbon emissions during transit, enabling competition for the lowest emissions. <br/>
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Won "Best Auth0 Application" and "Best Use of Kintone" awards at Grizzhacks 6<br/>
+                  </div>
+                  <div className="Project-link"></div>
+                </div>
+                <div className="Project">
+                  <img className="Project-image" src={system82} alt="System82"/>
+                  <div className="Project-title">System82</div>
+                  <div className="Project-specs"></div>
+                  <div className="Project-subtitle">Interactive Puzzle Experience</div>
+                  <div className="Project-body">
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Interactive Puzzle Experience <br/>
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Developed an interactive puzzle website using Flask framework. <br/>
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Designed puzzles requiring users to manipulate and interact with webpage elements to advance. <br/>
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Won "Best Artistic Application" award at Sparahack 9.<br/>
+                  </div>
+                  <div className="Project-link"></div>
+                </div>
+                <div className="Project">
+                  <img className="Project-image" src={led} alt="LED"/>
+                  <div className="Project-title">LED Phone Case</div>
+                  <div className="Project-specs"></div>
+                  <div className="Project-subtitle">Creative Hardware Prototype</div>
+                  <div className="Project-body">
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Functional iPhone SE phone case design custom printed using Autodesk 360 outfitted to comfortably house and operate an Arduino-powered LED ring running user uploaded code. <br/>
+                    <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Designed for MSU Design Day and was a winner in the EGR 100 design competition. <br/>
+                  </div>
+                  <div className="Project-link"></div>
+                </div>
+              </div>
+            </div>
+            <div id="awards" className="Awards-container">
+              <b>Awards</b>
+              <div className="Awards-body">
+                <div className="Award">
+                  <div className="Award-title">John K Welch Endowed Scholarship</div>
+                  <div className="Award-specs"></div>
+                  <div className="Award-body"></div>
+                  <div className="Award-link"></div>
+                </div>
+                <div className="Award">
+                  <div className="Award-title">Michigan Competitive Scholarship</div>
+                  <div className="Award-specs"></div>
+                  <div className="Award-body"></div>
+                  <div className="Award-link"></div>
+                </div>
+                <div className="Award">
+                  <div className="Award-title">SpartaHack 9 Winner</div>
+                  <div className="Award-specs"></div>
+                  <div className="Award-body"></div>
+                  <div className="Award-link"></div>
+                </div>
+                <div className="Award">
+                  <div className="Award-title">GrizzHacks 6 Winner</div>
+                  <div className="Award-specs"></div>
+                  <div className="Award-body"></div>
+                  <div className="Award-link"></div>
+                </div>
+                <div className="Award">
+                  <div className="Award-title">MSU Design Day EGR 100 Winner</div>
+                  <div className="Award-specs"></div>
+                  <div className="Award-body"></div>
+                  <div className="Award-link"></div>
+                </div>
+                <div className="Award">
+                  <div className="Award-title">Dean's List</div>
+                  <div className="Award-specs"></div>
+                  <div className="Award-body"></div>
+                  <div className="Award-link"></div>
+                </div>
+              </div>
+            </div>
+            <div className="Button-lists">
+              <Proficiencies/>
+              <Coursework />
+            </div>
           </div>
-
-
-          <Proficiencies/>
-          <Coursework />
         </header>
-
-        <div className="Right-panel">
-        </div>
       </div>
     );
   }

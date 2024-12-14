@@ -6,12 +6,27 @@
     --red: #D5B9B2;
     --purple: #e8d7f1
 }
-html, body {
-    background-color: var(--green);
-    height: 100%;
-    margin: 0;
-    padding: 0;
+
+.gif-overlay {
+    position: fixed; /* Stays in place while scrolling */
+    top: 0;
+    opacity: 5%;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensures it appears on top of everything */
+    pointer-events: none;
 }
+
+html, body {
+    height: 100%;
+    background-color: #D9F4C7;
+}
+
 /*
 Mobile Layout
 */
@@ -23,11 +38,11 @@ Desktop Layout
 */
 @media only screen and (min-width:1200px)
 {
-    .Center-panel{width:80%;height:10%;}
+    .Center-panel{width:90%;height:100%;}
 
-    .Right-panel{width:10%;height:100%;}
+    .Right-panel{width:5%;height:100%;}
 
-    .Left-panel{width:10%;height:100%}
+    .Left-panel{width:5%;height:100%;}
 }
 
 @font-face
@@ -50,13 +65,10 @@ Desktop Layout
     justify-content: center;
     align-items: center;
     margin: 0;
+    font-weight: normal;
     padding: 0;
 }
 
-.Left-panel, .Right-panel, .Center-panel {
-    height: 100%; /* Match parent height */
-    background-color: var(--tiel);
-}
 
 .Center-panel
 {
@@ -68,6 +80,54 @@ Desktop Layout
     font-size: calc(9px + 2vmin);
     color: var(--black);
 }
+.Left-panel, .Right-panel{
+    height: 100%; /* Match parent height */
+    background-color: black;
+}
+
+.NavBar
+{
+    overflow: hidden;
+    position:fixed;
+    flex-direction: row;
+    font-weight:600;
+    display: flex;
+    border-bottom: var(--black);
+    border-bottom-style:solid;
+    top:0;
+    left:0;
+    z-index:9998;
+    width: 100%;
+    height:4%;
+    font-size: 3vmin;
+    background-color:var(--tiel);
+    padding: 0.5%;
+    color:var(--black)
+}
+
+.NavBarLeft
+{
+    width: 50%;
+    text-align:left;
+}   
+
+.NavBarRight
+{
+    width: 50%;
+    text-align: right;
+    padding-right: 1%;
+}
+
+a.nav-link:link
+{
+    color:var(--black);
+    text-decoration: none;
+}
+a.nav-link:visited
+{
+    color:var(--black);
+    text-decoration: none;
+}
 
 .Profile
 {
@@ -76,10 +136,9 @@ Desktop Layout
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    margin-left: 2%;
-    margin-top: 2%;
-    margin-right: 2%;
-    margin-bottom: 2%;
+    margin: 5%;
+    margin-top: 10%;
+    margin-left: 0%;
 }
 
 .Profile-details
@@ -93,14 +152,15 @@ Desktop Layout
 
 @keyframes slideIn {
     from {
-        transform: translateX(-100%);
+        left: -100px;
         opacity: 0;
     }
     to {
-        transform: translateX(0);
+        left:0px;
         opacity: 1;
     }
 }
+
 @keyframes slideDown {
     from {
         transform: translateY(-100%);
@@ -113,24 +173,37 @@ Desktop Layout
 }
 .Profile-photo
 {
-    align-items: left;
-    width:15vmax;
-    height: 15vmax;
-    margin-top: 5%;
-    margin-right: 5%;
+    margin: 5%;
+    margin-left: 0%;
     margin-bottom: 5%;
+    align-items: left;
+    width: 20%;
+    height: 20%;
     position: relative;
-    animation: slideIn 1s ease-out forwards
+    animation: slideIn 1s ease-out forwards;
+    transition:0.5s;
+    transform: scale(1);
+    z-index: 9997;
 }
-
+.Profile-photo:hover
+{
+    transition: 0.5s;
+    transform: scale(1.25);
+    z-index: 9997;
+}
 
 .Title
 {
     text-align: center;
-    font-size: calc(15px + 2vmin);
-    margin-bottom: 1%;
+    font-size: calc(20px + 2vmin);
+    font-weight: 10px;
+    margin-bottom: 5%;
+    width:100%;
     background-color: var(--tiel);
-    animation : slideDown 1s ease-out forwards; 
+    animation: slideDown 1s ease-out forwards;
+    border-radius: 10px; /* Adjust this for more or less rounded corners */
+    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
+    padding: 10px 20px; /* Adds padding inside the box */ 
 }
 
 @keyframes intro-fade-in 
@@ -151,18 +224,17 @@ Desktop Layout
     opacity: 0;
     animation-delay: 5s;
 }
+
 .logo
 {
     height: 5vmin;
-    margin-top: 1vmin;
-    margin-bottom: 1vmin;
-    margin-left: 1vmin;
-    margin-right: 1vmin;
+    margin: 1%;
     transition:0.5s;
     transform: scale(1);
 
     pointer-events: auto;
 }
+
 .logo:hover
 {
     transition:0.5s;
@@ -183,8 +255,6 @@ Desktop Layout
     animation-delay: 1s;
 }
 
-
-
 @keyframes typing
 {
     
@@ -203,66 +273,110 @@ Desktop Layout
     }
 }
 
+.Body
+{
+
+    animation: slideIn 1s forwards ease-in;
+    animation-delay: 5s;
+    opacity: 0;
+}
+
 .Objective
 {
     background-color: var(--tiel);
     color:var(--black);
     text-align: center;
     height:flex;
-    padding-bottom:1%;
-    padding-top:1%;
-    animation: slideIn 1s forwards ease-in;
-    opacity: 0;
-    animation-delay: 5s
+    border-radius: 10px; /* Adjust this for more or less rounded corners */
+    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
+    margin: 5%;
+    padding: 2%;
+
 }
 
 .Objective-body
 {
-    margin-left: 10%;
-    margin-right: 10%;
     text-align: left;
     font-family: bodyFont;
     font-size: 2vmin;
+    margin:5%;
 }
 
+.Experience-header
+{
+    text-align: center;
+    width: 100%;
+}
+
+.Experience-title
+{
+    text-align: center;
+    padding:2%;
+    margin:5%;
+    background-color: var(--tiel);
+    border-radius: 10px; /* Adjust this for more or less rounded corners */
+    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
+    font-weight: bold;
+}
+
+.Experience-specs
+{
+    font-weight: normal;
+}
+
+.Experience-detail
+{
+    font-family: bodyFont;
+    font-size: 2vmin;
+    text-align: left;
+    margin: 5%;
+    font-weight: normal;
+}
+
+.Button-lists
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .Details-section
 {
     text-align: center;
-    opacity : 0;
-    animation : slideIn 1.5s forwards;
-    animation-delay: 5s;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin: 5%;
 }
-
 .Details-header
 {
+    box-shadow: 0px 2px 4px var(--black);
     padding: 12px 24px;
     font-family: pixelFont;
     font-size: 3vmin;
     background-color: var(--tiel); /* Green background */
+    border-radius: 10px; /* Adjust this for more or less rounded corners */
+    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
     color: var(--black);
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease; /* Smooth transition for hover and focus effects */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .Details-body
 {
-    margin-top: 2%;
-    text-align:center;
+    background-color: var(--tiel);
+    border-radius: 10px; /* Adjust this for more or less rounded corners */
+    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
+    text-align: left;
     font-family: bodyFont;
     font-size: 2vmin;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s east-out;
+    transition: max-height 0.3s ease-in-out;
+    transition: padding 0.3s ease-in-out;
 }
+
 .Details-body.open{
-    max-height: 1000px;
+    max-height: 100%;
+    padding:10%
 }
 
 @keyframes spin {
@@ -278,6 +392,71 @@ Desktop Layout
 {
     height: 1.5vmin;
     margin-top: 1.2vmin;
-    margin-right: 0.5vmin;
+    margin-right: 0.75vmin;
     animation: spin 3s infinite linear;
+}
+
+.Projects-container,
+.Awards-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    
+}
+
+.Projects-body,
+.Awards-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 6 columns */
+    grid-gap: 20px; /* Adds space between grid items */
+    margin-top: 20px; /* Space between title and grid */
+    text-align: left;
+}
+
+.Project-image
+{
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures consistent cropping if needed */
+    max-width: 80px; /* Optional: Restrict maximum size */
+    max-height: 80px; /* Optional: Restrict maximum size */
+    margin: 0 auto; /* Centers the image */
+    padding: 0; /* Removes unnecessary padding */
+    display: block; /* Ensures it is treated as a block for centering */
+}
+
+.Project,
+.Award {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--tiel);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    transform: scale(1);
+    text-align: center; /* Centers text below images */
+}
+.Project:hover,.Award:hover
+{
+    transition:0.5s;
+    transform: scale(1.1);
+}
+
+.Project-title,
+.Award-title {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.Project-body,
+.Award-body {
+    margin-top: 5px;
+    text-align: left;
+    font-family: bodyFont;
+    font-size: 2vmin;
 }
