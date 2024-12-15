@@ -8,17 +8,17 @@
 }
 
 .gif-overlay {
-    position: fixed; /* Stays in place while scrolling */
+    position: fixed;
     top: 0;
-    opacity: 5%;
+    opacity: 7%;
     left: 0;
-    width: 100%; /* Full width of the viewport */
-    height: 100%; /* Full height of the viewport */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional semi-transparent background */
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Ensures it appears on top of everything */
+    z-index: 9999; 
     pointer-events: none;
 }
 html, body {
@@ -101,12 +101,58 @@ Desktop Layout
     left:0;
     z-index:9998;
     width: 100%;
-    height:4%;
+    height:3%;
     font-size: 3vmin;
-    background-color:var(--tiel);
+    background-color:var(--black);
     padding: 0.5%;
-    color:var(--black)
+    color:white;
 }
+.Resume-download
+{
+    position: fixed;
+    top: 75%; 
+    left: 0; 
+    transform: translateY(-50%);
+    background-color: #9DCDC0;
+    color: #FFFFFF;
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    font-size: 1.5vmin;  /* Adjusted font size for readability */
+    width: auto;
+    padding: 10px 20px; /* Adjusted padding for better spacing */
+    z-index: 9998;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.Resume-download:hover 
+{
+    background-color: #8AC0B3;  /* Slightly darker color on hover */
+    transform: translateY(-50%) scale(1.05); /* Subtle zoom effect on hover */
+}
+  
+.Download-link 
+{
+    width: auto;  /* Set width to auto to avoid stretching */
+    height: auto;  /* Set height to auto */
+    max-width: 30px; /* Control size of the icon */
+    max-height: 30px; /* Control size of the icon */
+    margin-right: 10px; /* Add space between the icon and text */
+    vertical-align: middle; /* Align icon with the text */
+}
+  
+.Resume-download a 
+  {
+    display: flex;
+    align-items: center;  /* Align the icon and text */
+    text-decoration: none;  /* Remove underline from link */
+    color: #FFFFFF;  /* Ensure text color matches the background */
+  }
+  
+.Resume-download a:hover .Download-link 
+  {
+    transform: scale(1.1);  /* Slightly enlarge the icon when hovering */
+  }
 
 .NavBarLeft
 {
@@ -123,12 +169,12 @@ Desktop Layout
 
 a.nav-link:link
 {
-    color:var(--black);
+    color:white;
     text-decoration: none;
 }
 a.nav-link:visited
 {
-    color:var(--black);
+    color:white;
     text-decoration: none;
 }
 
@@ -203,9 +249,9 @@ a.nav-link:visited
     width:80%;
     background-color: var(--tiel);
     animation: slideDown 1s ease-out forwards;
-    border-radius: 10px; /* Adjust this for more or less rounded corners */
-    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
-    padding: 10px 20px; /* Adds padding inside the box */ 
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px var(--black); 
+    padding: 10px 20px; 
 }
 
 @keyframes intro-fade-in 
@@ -242,6 +288,7 @@ a.nav-link:visited
     transition:0.5s;
     transform: scale(1.5);
     rotate: 2;
+    z-index: 9995;
 }
 
 .Desc
@@ -292,8 +339,8 @@ a.nav-link:visited
 .Objective-body
 {
     background-color: var(--tiel);
-    border-radius: 10px; /* Adjust this for more or less rounded corners */
-    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px var(--black); 
     font-family: bodyFont;
     font-size: 2vmin;
     text-align: left;
@@ -320,8 +367,8 @@ a.nav-link:visited
     margin-top:5%;
     margin-bottom: 5%;
     background-color: var(--tiel);
-    border-radius: 10px; /* Adjust this for more or less rounded corners */
-    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px var(--black); 
     font-weight: bold;
 }
 
@@ -337,6 +384,7 @@ a.nav-link:visited
     text-align: left;
     margin: 5%;
     font-weight: normal;
+    
 }
 
 .Button-lists
@@ -348,6 +396,7 @@ a.nav-link:visited
 .Details-section
 {
     text-align: center;
+    margin:5;
     margin:1%;
 }
 .Details-header
@@ -356,24 +405,26 @@ a.nav-link:visited
     padding: 12px 24px;
     font-family: pixelFont;
     font-size: 3vmin;
-    background-color: var(--tiel); /* Green background */
-    border-radius: 10px; /* Adjust this for more or less rounded corners */
-    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
+    background-color: var(--tiel); 
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px var(--black);
     color: var(--black);
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for hover and focus effects */
+    transition: all 0.3s ease; 
 }
 
 .Details-body
 {
     background-color: var(--tiel);
-    border-radius: 10px; /* Adjust this for more or less rounded corners */
-    box-shadow: 0px 2px 4px var(--black); /* Shadow with a slight offset */
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px var(--black); 
     text-align: left;
     font-family: bodyFont;
     font-size: 2vmin;
+    margin-left:10%;
+    margin-right:10%;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
@@ -382,7 +433,7 @@ a.nav-link:visited
 
 .Details-body.open{
     max-height: 100%;
-    padding:10%
+    padding:5%;
 }
 
 @keyframes spin {
@@ -407,49 +458,52 @@ a.nav-link:visited
     display: flex;
     flex-direction: column;
     margin: 5%;
+    justify-items: center;  /* Center items inside each grid cell */
     
 }
 
 .Projects-body,
 .Awards-body {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 6 columns */
-    grid-gap: 20px; /* Adds space between grid items */
-    margin-top: 20px; /* Space between title and grid */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 1%; 
+    margin-top: 5%; 
     text-align: left;
 }
 
 .Project-image
 {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensures consistent cropping if needed */
-    max-width: 80px; /* Optional: Restrict maximum size */
-    max-height: 80px; /* Optional: Restrict maximum size */
-    margin: 0 auto; /* Centers the image */
-    padding: 0; /* Removes unnecessary padding */
-    display: block; /* Ensures it is treated as a block for centering */
+    height: auto; 
+    object-fit: cover; 
+    max-width: 80%;
+    max-height: 80%; 
+    margin: 0 auto; 
+    padding: 0;
+    display: block;
 }
 
 .Project,
 .Award {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers content horizontally */
-    justify-content: center; /* Centers content vertically */
-    padding: 10px;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: var(--tiel);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: 0.5s;
     transform: scale(1);
-    text-align: center; /* Centers text below images */
+    text-align: center;
+    padding:10%;
+    padding-bottom: 0%;
 }
 .Project:hover,.Award:hover
 {
     transition:0.5s;
     transform: scale(1.1);
+    z-index: 9995;
 }
 
 .Project-title,
@@ -480,14 +534,76 @@ a.nav-link:visited
     font-family: bodyFont;
     font-size: 2vmin;
 }
-.Project-link,
-.Award-link {
-    width: 100%;
-    height:100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensures consistent cropping if needed */
-    max-width: 20px; /* Optional: Restrict maximum size */
-    max-height: 20px; /* Optional: Restrict maximum size */
-    padding: 5%; /* Removes unnecessary padding */
-    display: block; /* Ensures it is treated as a block for centering */
+.Project-link
+ {
+    background-repeat: no-repeat;
+    display: block;
+    background-image: url('./images/project-link-static.png');
+    justify-content: center;
+    animation-play-state: paused;  
+    transition: animation 0.3s ease-in-out; 
+}
+.Work-link
+ {
+    object-fit: cover;
+    display: block; 
+    background-image: url('./images/project-link-static.png');
+    margin: 0 auto; 
+    justify-content: center;
+    font-weight: normal;
+    display: flex;                /* Activate flexbox */
+    flex-direction: column;       /* Stack children vertically */
+    align-items: center;          /* Center the link horizontally */
+    justify-content: flex-start;  /* Align children to the top */
+    animation-play-state: paused;  
+    transition: animation 0.3s ease-in-out;  
+}
+.Award-link
+{
+    object-fit: cover;
+    max-width: 50%; 
+    max-height: 30%;
+    display: block; 
+    margin: 0 auto;
+    justify-content: center;
+    animation-play-state: paused;
+    transition: animation 0.3s ease-in-out; 
+
+}
+.Work-link:hover,.Project-link:hover
+{
+    background-image: url('./images/project-link.gif'); 
+}
+
+.Details-section b {
+    font-family: pixelFont;
+}
+
+.Footer {
+    background-color:var(--black);;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    width:100%;
+}
+
+.Footer-content p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.Footer-links {
+    margin-top: 0.5rem;
+}
+
+.Footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+}
+
+.Footer-links a:hover {
+    text-decoration: underline;
 }

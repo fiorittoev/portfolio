@@ -11,9 +11,10 @@ import velocIT from './images/velocit.png';
 import carbonCount from './images/carboncount.png';
 import system82 from './images/system82.png';
 import led from './images/ledphonecase.png';
-import pLink from './images/project-link.svg';
+import pLink from './images/project-link.gif';
 import aLink from './images/award-link.svg';
 import downArrow from './images/down-arrow.gif';
+import rLink from './images/resume-link.svg';
 
 
 function Home() {
@@ -21,9 +22,7 @@ function Home() {
     return (
       
       <div className="Home">
-        <div class="gif-overlay">
-          <img src={scanLines} alt="Overlay GIF"></img>
-        </div>
+          <img class="gif-overlay" src={scanLines} alt="Overlay GIF"></img>
         <div className = "NavBar"> 
           <div className = "NavBarLeft">
             Evan Fioritto
@@ -34,6 +33,18 @@ function Home() {
             <a href="#projects" class="nav-link">Projects </a>
             <a href="#skills" class="nav-link">Skills</a>
           </div>
+        </div>
+
+        <div className="Resume-download">
+          <a 
+            href="/EVAN_FIORITTO_Software_Engineer_Internship_2024111420241114-25-ku12v020241114-25-4o9ckq.pdf" 
+            download="/EVAN_FIORITTO_Software_Engineer_Internship_2024111420241114-25-ku12v020241114-25-4o9ckq.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={rLink} alt="Download Resume" className="Download-link" />
+            Download Resume
+          </a>
         </div>
 
         <header className="Center-panel">
@@ -87,7 +98,11 @@ function Home() {
                   and manage desired files on a large scale from an online library to complete a dataset. <br/>
                   <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Successfully procured and verified over 20,000 files via Selenium and OCR processing. <br/>
                   <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Experimented with scaling up a LSTM machine learning model to predict and score integrative complexity of a body of text. <br/>
-                  <a target="_blank" href="https://github.com/fiorittoev/ARC-Collection-Script" rel="noreferrer ">Implementation Link</a>
+                  <div className="Project-link">
+                    <a target="_blank" href="https://github.com/fiorittoev/ARC-Collection-Script" rel="noreferrer">
+                      <img src={pLink} className="Project-link-image" alt="Project link" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -97,7 +112,7 @@ function Home() {
               </div>
               <div className="Projects-body">
                 <div className="Project">
-                  <div className="Project-title">StreetMeet (In Progress)</div>
+                  <div className="Project-title">StreetPass Mobile Port (In Progress)</div>
                   <div className="Project-specs">Present</div>
                   <div className="Project-body">
                   </div>
@@ -114,7 +129,11 @@ function Home() {
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Collaborated in leveraging Groq AI API for skill summaries and tailored networking recommendations. <br/>
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Presented at MHacks 2024<br/>
                   </div>
-                  <a target="_blank" href="https://devpost.com/software/velocit" rel="noreferrer"><img src={pLink} className="Project-link" alt="project link"/></a>
+                  <div className="Project-link">
+                    <a target="_blank" href="https://devpost.com/software/velocit" rel="noreferrer">
+                      <img src={pLink} className="Project-link-image" alt="Project link" />
+                    </a>
+                  </div>
                 </div>
                 <div className="Project">
                   <img className="Project-image" src={carbonCount} alt="Carbon count"/>
@@ -127,7 +146,11 @@ function Home() {
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Calculated and tracked users' carbon emissions during transit, enabling competition for the lowest emissions. <br/>
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Won "Best Auth0 Application" and "Best Use of Kintone" awards at Grizzhacks 6<br/>
                   </div>
-                  <a target="_blank" href="https://devpost.com/software/carboncounter" rel="noreferrer"><img src={pLink} className="Project-link" alt="project link"/></a>
+                  <div className="Project-link">
+                    <a target="_blank" href="https://devpost.com/software/carboncounter" rel="noreferrer">
+                      <img src={pLink} className="Project-link-image" alt="Project link" />
+                    </a>
+                  </div>
                 </div>
                 <div className="Project">
                   <img className="Project-image" src={system82} alt="System82"/>
@@ -140,7 +163,11 @@ function Home() {
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Designed puzzles requiring users to manipulate and interact with webpage elements to advance. <br/>
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Won "Best Artistic Application" award at Sparahack 9.<br/>
                   </div>
-                  <a target="_blank" href="https://devpost.com/software/system82" rel="noreferrer"><img src={pLink} className="Project-link" alt="project link"/></a>
+                  <div className="Project-link">
+                    <a target="_blank" href="https://devpost.com/software/system82" rel="noreferrer">
+                      <img src={pLink} className="Project-link-image" alt="Project link" />
+                    </a>
+                  </div>
                 </div>
                 <div className="Project">
                   <img className="Project-image" src={led} alt="LED"/>
@@ -151,7 +178,11 @@ function Home() {
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Functional iPhone SE phone case design custom printed using Autodesk 360 outfitted to comfortably house and operate an Arduino-powered LED ring running user uploaded code. <br/>
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Designed for MSU Design Day and was a winner in the EGR 100 design competition. <br/>
                   </div>
-                  <a target="_blank" href="https://designday.msu.edu/wp-content/uploads/2023/04/Design_Day_Spring_2023_web_RED_final.pdf" rel="noreferrer"><img src={pLink} className="Project-link" alt="project link"/></a>
+                  <div className="Project-link">
+                    <a target="_blank" href="https://designday.msu.edu/wp-content/uploads/2023/04/Design_Day_Spring_2023_web_RED_final.pdfr" rel="noreferrer">
+                      <img src={pLink} className="Project-link-image" alt="Project link" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -173,25 +204,27 @@ function Home() {
                 <div className="Award">
                   <div className="Award-title">SpartaHack 9 Winner</div>
                   <div className="Award-specs">Jan 2024</div>
-                  <div className="Award-body">Interactive Media Track - Best Artistic Application: "You wonder how art and technology combine in the best way possible? The best artistic application in interactive media will show how that can be done!"</div>
+                  <div className="Award-body"><b>Interactive Media Track -</b> Best Artistic Application: "You wonder how art and technology combine in the best way possible? The best artistic application in interactive media will show how that can be done!"</div>
                   <a target="_blank" href="https://spartahack-9.devpost.com/" rel="noreferrer"><img src={aLink} className="Award-link" alt="award link"/></a>
                 </div>
                 <div className="Award">
                   <div className="Award-title">GrizzHacks 6 Winner</div>
-                  <div className="Award-specs"></div>
-                  <div className="Award-body"></div>
+                  <div className="Award-specs">Feb 2024</div>
+                  <div className="Award-body"><b>Best Use of Auth0 -</b> "Auth0 wants your applications to be secure! Why spend hours building features like social sign-in, Multi-Factor Authentication, and passwordless log-in when you can enable them through Auth0 straight out of the box?"<br/>
+                                              <b>Best Use of Kintone -</b> "Still not sure what backend to use in your hack? Kintone is a low-code web database that lets you set up your backend in minutes. It's beginner friendly, allowing you to customize your Kintone app using nothing but JavaScript and HTML."</div>
                   <a target="_blank" href="https://grizzhacks-6.devpost.com/" rel="noreferrer"><img src={aLink} className="Award-link" alt="award link"/></a>
                 </div>
                 <div className="Award">
                   <div className="Award-title">MSU Design Day EGR 100 Winner</div>
-                  <div className="Award-specs"></div>
-                  <div className="Award-body"></div>
+                  <div className="Award-specs">May 2023</div>
+                  <div className="Award-body">EGR 100, Introduction to Engineering Design, is a college-level course required of all incoming first-year engineering students. It is an integral part of the CoRe (Cornerstone and Residential)<br/>
+                  For the final course project, the student teams selected from eight project types: (i) Create a Phone App, (ii) 3D Printing CAD Drawing, (iii) Design a Mini Solar Car, (iv) Water Filtration System Design, (v) Create an Adafruit LED Circuit, (vi) Design a Battlebot, (vii) Costa Rica Community Designs, and (viii) CoRe Industry-Sponsored Projects. CoRe Industry- Sponsored Projects involved collaborations with Eli Lilly on Drug Manufacturing Requirements.</div>
                   <a target="_blank" href="https://designday.msu.edu/wp-content/uploads/2023/04/Design_Day_Spring_2023_web_RED_final.pdf" rel="noreferrer"><img src={aLink} className="Award-link" alt="award link"/></a>
                 </div>
                 <div className="Award">
                   <div className="Award-title">Dean's List</div>
-                  <div className="Award-specs"></div>
-                  <div className="Award-body"></div>
+                  <div className="Award-specs">Various Dates</div>
+                  <div className="Award-body">The Dean's List honors all undergraduates in the university who earn a 3.50 or better grade–point average (GPA) for the courses in their undergraduate program totaling 12 or more credits for a given semester. The courses must be taken as part of the undergraduate program to be recognized as part of the semester total GPA, and not taken to fulfill the requirements of a graduate or professional degree program.</div>
                   <a target="_blank" href="https://reg.msu.edu/academicprograms/Print.aspx?Section=294" rel="noreferrer"><img src={aLink} className="Award-link" alt="award link"/></a>
                 </div>
               </div>
@@ -202,6 +235,18 @@ function Home() {
             </div>
           </div>
         </header>
+
+        <footer className="Footer">
+          <div className="Footer-content">
+            <p>© {new Date().getFullYear()} Evan Fioritto. All Rights Reserved.</p>
+            <div className="Footer-links">
+              <a href="https://github.com/fiorittoev" target="_blank" rel="noreferrer">GitHub</a> | 
+              <a href="https://www.linkedin.com/in/evanfioritto/" target="_blank" rel="noreferrer"> LinkedIn</a> | 
+              <a href="https://devpost.com/fiorittoev" target="_blank" rel="noreferrer"> Devpost</a>
+            </div>
+          </div>
+        </footer>
+
       </div>
     );
   }
