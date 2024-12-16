@@ -37,8 +37,8 @@ function Home() {
 
         <div className="Resume-download">
           <a 
-            href="/evan_fioritto_resume.pdf" 
-            download="/evan_fioritto_resume.pdf"
+            href="./evan_fioritto_resume.pdf" 
+            download="Evan_Fioritto_SWE_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
