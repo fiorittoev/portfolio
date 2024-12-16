@@ -37,8 +37,8 @@ function Home() {
 
         <div className="Resume-download">
           <a 
-            href="/EVAN_FIORITTO_Software_Engineer_Internship_2024111420241114-25-ku12v020241114-25-4o9ckq.pdf" 
-            download="/EVAN_FIORITTO_Software_Engineer_Internship_2024111420241114-25-ku12v020241114-25-4o9ckq.pdf"
+            href="/evan_fioritto_resume.pdf" 
+            download="/evan_fioritto_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
