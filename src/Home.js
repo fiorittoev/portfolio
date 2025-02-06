@@ -123,6 +123,7 @@ function Home() {
                   <img className="Project-image" src={thereMINI} alt="thereMINI"/>
                   <div className="Project-title">thereMINI</div>
                   <div className="Project-specs">Feb. 2025</div>
+                  <div className="Project-subtitle">Wearable MIDI Controller</div>
                   <div className="Project-body">
                     <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Designed and implemented an accessible, motion-based MIDI controller using the FREE-WILi device, enabling intuitive one-handed
                     music creation through hand gestures<br/>
