@@ -18,6 +18,7 @@ const Proficiencies= () => {
           <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> C++/C [4]<br />
           <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Java [1]<br />
         <br/><b>Additional Languages with Proficiency: </b><br/><br/>
+          <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> SQL<br />
           <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Javascript<br />
           <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Typescript<br />
           <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> HTML/CSS<br />
@@ -38,6 +39,7 @@ const Proficiencies= () => {
         <br/><b>Concepts: </b> <br/><br/>
           <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Object Oriented Programming<br />
           <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Data Structures and Algorithms<br />
+          <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Embedded Systems<br />
           <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Web Design<br />
           <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Design Patterns<br />
           <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Multithreading<br />

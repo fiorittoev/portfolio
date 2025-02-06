@@ -14,13 +14,17 @@ const Coursework = () => {
       </button>
       <div className={`Details-body ${isCourseworkOpen ? 'open' : ''}`}>
         <b>Planned Courses (Spring 2025)</b>: <br/><br/>
+        <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Software Engineering [CSE 435]<br />
+        <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Collaborative Design [CSE 498]<br />
+        <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Systems Analysis and Design [ITM 311]<br />
+        <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Web Design and Development [MI 349]<br />
+        <br/>
+        <b>Completed Courses:</b> <br/><br/>
         <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Algorithm Engineering [CSE 431]<br />
         <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Web App Architecture and Development [CSE 477]<br />
         <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Info Management and the Cloud [CSE 380]<br />
         <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Network Management and Security [MI 361]<br />
         <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Understanding Media and Info [MI 101]<br />
-        <br/>
-        <b>Completed Courses:</b> <br/><br/>
         <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Matrix Algebra with Computational Applications [MTH 314]<br />
         <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Probability and Statistics for Engineering - Honors [STT351-H]<br />
         <img src={bulletPoint} className="Bullet-Point" alt="Bullet Point" /> Algorithms and Data Structures [CSE 331]<br />
