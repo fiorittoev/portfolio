@@ -8,7 +8,7 @@ import Proficiencies from './components/proficiencies';
 import bulletPoint from './images/bulletPoint.png';
 import scanLines from './images/scanlines.gif';
 import velocIT from './images/velocit.png';
-import thereMINIT from './images/theremini.jpg';
+import thereMINI from './images/theremini.jpg';
 import carbonCount from './images/carboncount.png';
 import system82 from './images/system82.png';
 import led from './images/ledphonecase.png';
@@ -214,13 +214,13 @@ function Home() {
             </div>
             <div id="awards" className="Awards-container">
               <b>Awards</b>
-              <div className="Award">
+              <div className="Awards-body">
+                <div className="Award">
                   <div className="Award-title">Spartahack X Winner</div>
-                  <div className="Award-specs">Jul 2024</div>
+                  <div className="Award-specs">Feb 2025</div>
                   <div className="Award-body"><b>Best Use of FREE-WiLi application</b></div>
                   <a target="_blank" href="https://spartahack-x.devpost.com/" rel="noreferrer"><img src={aLink} className="Award-link" alt="award link"/></a>
                 </div>
-              <div className="Awards-body">
                 <div className="Award">
                   <div className="Award-title">John K Welch Endowed Scholarship</div>
                   <div className="Award-specs">Jul 2024</div>
